@@ -1,3 +1,78 @@
-body h1 {
-  color: red;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,500&display=swap");
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.section-1 {
+  background-image: url("https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  position: relative;
+}
+.section-1 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.section-1 .container .wrapper {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+}
+.section-1 .container .wrapper .name,
+.section-1 .container .wrapper .age,
+.section-1 .container .wrapper .job {
+  font-size: 20px;
+  font-family: "poppins";
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+.section-1 .btn-group {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+}
+.section-1 .btn-group .btn-decrease {
+  font-size: 20px;
+  font-family: "poppins";
+  font-weight: 600;
+  position: relative;
+  transform: translate(0vh, 46vh);
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.section-1 .btn-group .btn-increase {
+  font-size: 20px;
+  font-family: "poppins";
+  font-weight: 600;
+  position: relative;
+  left: 130px;
+  transform: translate(0vh, 46vh);
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }

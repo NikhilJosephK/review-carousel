@@ -1,3 +1,6 @@
+let btnIncrease = document.querySelector(".btn-increase");
+let btnDecrease = document.querySelector(".btn-decrease");
+
 let array = [
   {
     id: 1,
@@ -27,20 +30,19 @@ let array = [
 
 let number = 0;
 
-window.addEventListener('load',function(){
+window.addEventListener("load", function () {
+  if (number === 0) {
+    number = 1;
+  }
 
-    if(number === 0){
-        number=1;
-    }
+  render([array[0]]);
 
-    render([array[0]])
-})
+  btnDecrease.style.left = `${window.innerWidth - 250}px`;
+});
 
-let btnIncrease = document.querySelector(".btn-increase");
-let btnDecrease = document.querySelector(".btn-decrease");
-
-
-
+window.addEventListener("resize", function () {
+  btnDecrease.style.left = `${window.innerWidth - 250}px`;
+});
 
 // increase function or move slider to the right
 
@@ -62,7 +64,7 @@ btnIncrease.addEventListener("click", function () {
 // decrease function or move slider to the left
 
 btnDecrease.addEventListener("click", function () {
-    number -= 1;
+  number -= 1;
   if (number === -1 || number === 0) {
     number = 4;
   }
@@ -76,22 +78,21 @@ btnDecrease.addEventListener("click", function () {
   render(information);
 });
 
+// render function
 
-// render function 
+function render(data) {
+  let container = document.querySelector(".container");
+  container.innerHTML = "";
 
-function render(data){
-
- let container = document.querySelector('.container');
- container.innerHTML = "";
-
-    data.map(item=>{
-       container.innerHTML = `
+  data.map((item) => {
+    container.innerHTML = `
        <div class="wrapper">
        <h3 class="name">${item.name}</h3>
        <h4 class="age">${item.age}</h4>
        <h5 class="job">${item.job}</h5>    
         </div>
-       `
-    })
-
+       `;
+  });
 }
+
+

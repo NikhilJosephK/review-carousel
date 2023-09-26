@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "motion": "^10.16.4"
+  },
+  "type": "module",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}

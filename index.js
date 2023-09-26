@@ -1,3 +1,5 @@
+import { animate } from "/node_modules/motion";
+
 let btnIncrease = document.querySelector(".btn-increase");
 let btnDecrease = document.querySelector(".btn-decrease");
 
@@ -86,7 +88,7 @@ function render(data) {
 
   data.map((item) => {
     container.innerHTML = `
-       <div class="wrapper">
+       <div id="wrapper" class="wrapper">
        <h3 class="name">${item.name}</h3>
        <h4 class="age">${item.age}</h4>
        <h5 class="job">${item.job}</h5>    
@@ -94,5 +96,32 @@ function render(data) {
        `;
   });
 }
+
+const btns = document.querySelectorAll("button");
+
+animate(
+  btns,
+  {  
+    opacity : ["0","1"],
+     y : ["300px", "350px"]
+   }, 
+   {
+    duration : '3'
+   }
+)
+
+
+animate(
+  '.container',
+  {
+    opacity : ["0" , "1"],
+    scale : [".8" , "1"]
+  },
+  {
+    duration : "1"
+  }
+)
+
+
 
 
